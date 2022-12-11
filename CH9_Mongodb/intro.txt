@@ -1,0 +1,16 @@
+Mongodb is an no sql(not only sql) database
+
+//open source
+
+Advantages of Mongodb 
+1.robust
+2.scalable =>takes less time to process large volumes of data
+3.load balancing =>
+companies have many server in order to lessen the load on a single server 
+server shofts the load to other servers it is load balancing
+4.flexible
+5.sharding
+
+Disadvantages
+1.Complex transaction can not be performed  does not meet Acid properties
+2. does not support joins 

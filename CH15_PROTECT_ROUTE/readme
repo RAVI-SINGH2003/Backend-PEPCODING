@@ -1,0 +1,7 @@
+//In this module we want to implement a functionality that getUsers 
+// function should display all users only if user is logged in
+//for that we will use cookie
+
+//while logging in we will set isLoggedIn cookie = true
+// we will setup a middleware function protectRoute which will run 
+// before the  getUsers function will run and then will we checked if isLoggedin cookie = true or not

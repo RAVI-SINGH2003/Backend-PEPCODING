@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action>
+        <label>Email</label>
+        <input type="email"> <br><br>
+        <label>Name</label>
+        <input type="text"><br> <br>
+        <label>password</label>
+        <input type="password"><br> <br>
+        <label>confirm password</label>
+        <input class='confirm_pass' type="password"><br> <br>
+        <button type="submit">Signup</button>
+    </form>  
+    
+    //making post request
+
+    <!-- axios fectch -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        let btn = document.querySelector('button')
+        btn.addEventListener('click', async function(e){
+        e.preventDefault();
+        let email = document.querySelector("input[type ='email']").value
+        let name = document.querySelector("input[type ='text']").value
+        let password = document.querySelector("input[type ='password']").value
+        let confirmPassword = document.querySelector('.confirm_pass').value;
+        let resp = await axios.post('/auth/signup',{email,name,password, confirmPassword })
+        console.log('resp',resp)
+        //you can also view the response coming from backend in network tab in response section
+
+        })
+    </script>
+</body>
+</html>
